@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!-- V3: Vibrant Premium | Accent:#fb923c | AI Website Factory -->
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirage Looks | Strategic Business Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: "#fb923c",
+                        dark: "#050505",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-orb {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white font-sans selection:bg-brand selection:text-black">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center">
+                    <div class="w-4 h-4 bg-black rounded-sm rotate-45"></div>
+                </div>
+                <span class="text-2xl font-black tracking-tighter">MIRAGE<span class="text-brand">LOOKS</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm uppercase tracking-widest text-gray-400">
+                <a href="#services" class="hover:text-brand transition-colors">Services</a>
+                <a href="#about" class="hover:text-brand transition-colors">About</a>
+                <a href="#gallery" class="hover:text-brand transition-colors">Gallery</a>
+                <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/919506610020" target="_blank" class="hidden sm:flex bg-brand text-black font-bold px-6 py-2.5 rounded-full items-center gap-2 hover:scale-105 transition-transform">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    WhatsApp
+                </a>
+                <button id="menu-btn" class="md:hidden text-white">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-black/95 border-b border-white/10 p-8 flex-col gap-6 text-center text-xl font-bold">
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="https://wa.me/919506610020" target="_blank" class="bg-brand text-black py-4 rounded-xl">Chat with us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="hero-orb top-[-10%] left-[-10%] bg-brand animate-pulse-slow"></div>
+        <div class="hero-orb bottom-[10%] right-[-5%] bg-blue-500 animate-pulse-slow"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-brand/20 text-brand text-sm font-bold mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
+                    </span>
+                    PREMIUM BUSINESS CONSULTANCY
+                </div>
+                <h1 class="text-6xl lg:text-8xl font-black leading-[1.1] mb-6">
+                    Strategic growth <br>solutions <span class="text-brand">for modern</span> enterprises.
+                </h1>
+                <p class="text-xl text-gray-400 mb-10 max-w-xl">
+                    Empowering local businesses with enterprise-grade strategy, digital transformation, and market-leading operational frameworks.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <a href="https://wa.me/919506610020" target="_blank" class="bg-brand text-black font-bold px-8 py-4 rounded-full text-center hover:shadow-[0_0_30px_-5px_#fb923c] transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="zap" class="w-5 h-5 fill-current"></i> Get Started Now
+                    </a>
+                    <a href="#services" class="glass px-8 py-4 rounded-full font-bold text-center border-white/20 hover:bg-white/10 transition-all">
+                        Our Services
+                    </a>
+                </div>
+                
+                <!-- Stat Bar -->
+                <div class="grid grid-cols-3 gap-8 py-8 border-t border-white/10">
+                    <div>
+                        <div class="text-3xl font-black text-white">4.5/5</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">Client Satisfaction</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-white">135+</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">Corporate Reviews</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-white">100%</div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">Strategic Focus</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative reveal delay-300">
+                <div class="absolute -inset-4 border border-brand/20 rounded-[2.5rem] -rotate-3"></div>
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1400&q=85" alt="Office Professional" class="relative rounded-[2rem] w-full h-[600px] object-cover shadow-2xl">
+                <div class="absolute -bottom-6 -left-6 glass p-6 rounded-2xl border-brand/30">
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 rounded-full border-2 border-dark bg-gray-500"></div>
+                            <div class="w-10 h-10 rounded-full border-2 border-dark bg-gray-600"></div>
+                            <div class="w-10 h-10 rounded-full border-2 border-dark bg-brand flex items-center justify-center text-black font-bold text-xs">+135</div>
+                        </div>
+                        <div class="text-sm font-bold">Trusted by local leaders</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 lg:px-12 bg-[#080808]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <h2 class="text-brand font-bold tracking-widest uppercase mb-4 text-sm">Our Expertise</h2>
+                <h3 class="text-4xl lg:text-6xl font-black mb-6 italic">World-class solutions for your local business.</h3>
+                <p class="text-gray-400">We blend global industry standards with local market knowledge to deliver results that actually move the needle.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="glass p-8 group hover:border-brand/50 transition-all duration-500 reveal">
+                    <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-black mb-8 group-hover:rotate-12 transition-transform">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                    </div>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-brand mb-2 block">High Impact</span>
+                    <h4 class="text-2xl font-bold mb-4">Strategic Consulting</h4>
+                    <p class="text-gray-400 mb-6">Comprehensive roadmaps designed to help your business achieve long-term success and market leadership.</p>
+                </div>
+
+                <div class="glass p-8 group hover:border-brand/50 transition-all duration-500 reveal delay-100">
+                    <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-black mb-8 group-hover:rotate-12 transition-transform">
+                        <i data-lucide="search" class="w-7 h-7"></i>
+                    </div>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-brand mb-2 block">Data Driven</span>
+                    <h4 class="text-2xl font-bold mb-4">Market Research</h4>
+                    <p class="text-gray-400 mb-6">Deep-dive analytical insights into consumer behavior and local industry trends to inform your next move.</p>
+                </div>
+
+                <div class="glass p-8 group hover:border-brand/50 transition-all duration-500 reveal delay-200">
+                    <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-black mb-8 group-hover:rotate-12 transition-transform">
+                        <i data-lucide="settings" class="w-7 h-7"></i>
+                    </div>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-brand mb-2 block">Efficiency</span>
+                    <h4 class="text-2xl font-bold mb-4">Operational Excellence</h4>
+                    <p class="text-gray-400 mb-6">Streamlining internal processes and workflows to maximize efficiency and reduce overhead costs.</p>
+                </div>
+
+                <div class="glass p-8 group hover:border-brand/50 transition-all duration-500 reveal">
+                    <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-black mb-8 group-hover:rotate-12 transition-transform">
+                        <i data-lucide="shield" class="w-7 h-7"></i>
+                    </div>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-brand mb-2 block">Reputation</span>
+                    <h4 class="text-2xl font-bold mb-4">Brand Management</h4>
+                    <p class="text-gray-400 mb-6">Building and sustaining a powerful market presence that resonates with your target audience.</p>
+                </div>
+
+                <div class="glass p-8 group hover:border-brand/50 transition-all duration-500 reveal delay-100">
+                    <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-black mb-8 group-hover:rotate-12 transition-transform">
+                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                    </div>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-brand mb-2 block">Innovation</span>
+                    <h4 class="text-2xl font-bold mb-4">Digital Transformation</h4>
+                    <p class="text-gray-400 mb-6">Modernizing legacy systems and integrating advanced digital tools for the contemporary marketplace.</p>
+                </div>
+
+                <div class="glass p-8 group hover:border-brand/50 transition-all duration-500 reveal delay-200">
+                    <div class="w-14 h-14 bg-brand rounded-2xl flex items-center justify-center text-black mb-8 group-hover:rotate-12 transition-transform">
+                        <i data-lucide="pie-chart" class="w-7 h-7"></i>
+                    </div>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-brand mb-2 block">Security</span>
+                    <h4 class="text-2xl font-bold mb-4">Financial Advisory</h4>
+                    <p class="text-gray-400 mb-6">Sound fiscal strategies including risk management and capital allocation for sustainable scaling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 lg:px-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal">
+                <h2 class="text-brand font-bold tracking-widest uppercase mb-4 text-sm">Our Legacy</h2>
+                <h3 class="text-4xl lg:text-6xl font-black mb-8 leading-tight">We help Kanpur's finest businesses thrive.</h3>
+                <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                    At Mirage Looks, we believe that professional business solutions shouldn't be reserved for global giants. We bring that same level of strategic rigor and operational excellence to the local landscape of Naubasta and beyond.
+                </p>
+                <p class="text-gray-400 mb-10 leading-relaxed">
+                    Our team of specialists works directly with founders and CEOs to identify friction points and unlock new growth channels through data and innovation.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-6 mb-12">
+                    <div class="glass p-6 rounded-2xl">
+                        <div class="flex items-center gap-3 text-brand mb-2">
+                            <i data-lucide="users" class="w-5 h-5"></i>
+                            <span class="text-2xl font-black text-white counter" data-target="135">0</span><span class="text-2xl font-black">+</span>
+                        </div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">Happy Clients</div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl">
+                        <div class="flex items-center gap-3 text-brand mb-2">
+                            <i data-lucide="star" class="w-5 h-5"></i>
+                            <span class="text-2xl font-black text-white counter" data-target="4.5">0</span>
+                        </div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">Average Rating</div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl">
+                        <div class="flex items-center gap-3 text-brand mb-2">
+                            <i data-lucide="clock" class="w-5 h-5"></i>
+                            <span class="text-2xl font-black text-white">24/7</span>
+                        </div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">Support</div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl">
+                        <div class="flex items-center gap-3 text-brand mb-2">
+                            <i data-lucide="check" class="w-5 h-5"></i>
+                            <span class="text-2xl font-black text-white counter" data-target="100">0</span><span class="text-2xl font-black">%</span>
+                        </div>
+                        <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">Commitment</div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/919506610020" target="_blank" class="bg-brand text-black font-bold px-10 py-4 rounded-full inline-flex items-center gap-3 hover:shadow-lg transition-all">
+                    Consult Our Experts <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+
+            <div class="relative reveal delay-200">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-brand/10 rounded-full blur-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=85" alt="Office Meeting" class="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover border border-white/10">
+                <div class="absolute -bottom-8 right-12 glass p-8 rounded-2xl z-20 max-w-[280px]">
+                    <i data-lucide="quote" class="text-brand w-8 h-8 mb-4"></i>
+                    <p class="text-sm italic text-gray-300">"Strategy is not about being better than what you do; it's about being different."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 px-6 lg:px-12 bg-[#080808]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand font-bold tracking-widest uppercase mb-4 text-sm">Success Stories</h2>
+                <h3 class="text-4xl font-black">Words from our partners</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass p-8 rounded-3xl relative reveal">
+                    <div class="flex text-brand mb-6">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 mb-8 italic">"Mirage Looks transformed our operational workflow. Their strategic consulting is top-notch and highly effective for our expansion in Uttar Pradesh."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700"></div>
+                        <div>
+                            <div class="font-bold">Rajesh Kumar</div>
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest">CEO, TechVantage</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass p-8 rounded-3xl relative reveal delay-100">
+                    <div class="flex text-brand mb-6">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 mb-8 italic">"The market research insights provided were eye-opening. Helped us capture significantly more market share in just six months."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700"></div>
+                        <div>
+                            <div class="font-bold">Anjali Sharma</div>
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest">Founder, Green Retail</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass p-8 rounded-3xl relative reveal delay-200">
+                    <div class="flex text-brand mb-6">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-300 mb-8 italic">"Professional, knowledgeable, and reliable. Their digital transformation services are essential for any modern firm looking to stay relevant."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700"></div>
+                        <div>
+                            <div class="font-bold">Vikram Singh</div>
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest">Director, Singh Logistics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12 reveal">
+                <div>
+                    <h2 class="text-brand font-bold tracking-widest uppercase mb-4 text-sm">Workplace Culture</h2>
+                    <h3 class="text-4xl font-black">Our Environments</h3>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-[600px]">
+                <div class="md:col-span-2 overflow-hidden rounded-3xl reveal">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85" alt="Office" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer">
+                </div>
+                <div class="overflow-hidden rounded-3xl reveal delay-100">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=85" alt="Tech" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-24 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative bg-gradient-to-r from-brand to-orange-600 rounded-[3rem] p-12 lg:p-20 overflow-hidden reveal">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-white/20 blur-[100px] -mr-48 -mt-48"></div>
+                <div class="relative z-10 max-w-2xl">
+                    <h2 class="text-black text-4xl lg:text-6xl font-black mb-8">Ready to revolutionize your business growth?</h2>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/919506610020" target="_blank" class="bg-black text-white font-bold px-10 py-5 rounded-full text-center hover:scale-105 transition-all inline-flex items-center justify-center gap-3">
+                            Start Consultation <i data-lucide="phone-call" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#contact" class="bg-transparent border-2 border-black text-black font-bold px-10 py-5 rounded-full text-center hover:bg-black/10 transition-all">
+                            Visit Our Office
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="py-24 px-6 lg:px-12 bg-[#080808]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <!-- Info Cards -->
+                <div class="glass p-10 rounded-[2.5rem] reveal">
+                    <div class="w-16 h-16 bg-brand/10 text-brand rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="phone" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Call Us</h4>
+                    <p class="text-gray-400 mb-6">Available Mon-Sat, 9AM-7PM</p>
+                    <a href="tel:+919506610020" class="text-2xl font-black text-white hover:text-brand transition-colors">+91 95066 10020</a>
+                </div>
+
+                <div class="glass p-10 rounded-[2.5rem] reveal delay-100">
+                    <div class="w-16 h-16 bg-brand/10 text-brand rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="message-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">WhatsApp</h4>
+                    <p class="text-gray-400 mb-6">Fastest way to get a response</p>
+                    <a href="https://wa.me/919506610020" target="_blank" class="text-2xl font-black text-white hover:text-brand transition-colors">Chat Now</a>
+                </div>
+
+                <div class="glass p-10 rounded-[2.5rem] reveal delay-200">
+                    <div class="w-16 h-16 bg-brand/10 text-brand rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="map-pin" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Location</h4>
+                    <p class="text-gray-400 mb-6 italic">C829+GHP, Naubasta, Kanpur, India</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=C829%2BGHP%2C%20Naubasta%2C%20Kanpur%2C%20Uttar%20Pradesh%20208021%2C%20India" target="_blank" class="text-brand font-bold uppercase tracking-widest text-sm">Open in Maps</a>
+                </div>
+            </div>
+
+            <!-- Map Iframe -->
+            <div class="rounded-[2.5rem] overflow-hidden glass p-4 h-[450px] reveal">
+                <iframe 
+                    class="w-full h-full rounded-[1.5rem] grayscale invert opacity-80"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114343.89679697943!2d80.24521746401083!3d26.41725721832049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c3796850f75f9%3A0x6b47c089201a0846!2sNaubasta%2C%20Kanpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 lg:px-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
+                            <div class="w-5 h-5 bg-black rounded-sm rotate-45"></div>
+                        </div>
+                        <span class="text-3xl font-black tracking-tighter">MIRAGE<span class="text-brand">LOOKS</span></span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm mb-8">
+                        Elite professional business solutions for modern local enterprises. Leading the way in strategic consultancy in Uttar Pradesh.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-brand hover:text-black transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-brand hover:text-black transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-brand hover:text-black transition-all">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Explore</h5>
+                    <ul class="space-y-4 text-gray-500 font-medium">
+                        <li><a href="#services" class="hover:text-brand transition-colors">Services</a></li>
+                        <li><a href="#about" class="hover:text-brand transition-colors">Success Stories</a></li>
+                        <li><a href="#gallery" class="hover:text-brand transition-colors">Our Work</a></li>
+                        <li><a href="#contact" class="hover:text-brand transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Contact Info</h5>
+                    <ul class="space-y-4 text-gray-500 font-medium text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand shrink-0"></i>
+                            Naubasta, Kanpur, Uttar Pradesh 208021
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand shrink-0"></i>
+                            +91 95066 10020
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand shrink-0"></i>
+                            contact@miragelooks.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/5 text-center text-gray-600 text-sm flex flex-col md:flex-row justify-between gap-4">
+                <p>&copy; 2024 Mirage Looks. All rights reserved.</p>
+                <div class="flex justify-center gap-8">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/90', 'backdrop-blur-md', 'py-4', 'border-b', 'border-white/10');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('bg-black/90', 'backdrop-blur-md', 'py-4', 'border-b', 'border-white/10');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Animated Counters
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const speed = 200;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = (count + inc).toFixed(target % 1 === 0 ? 0 : 1);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+
+        // Trigger counters when visible
+        const counterSection = document.getElementById('about');
+        const counterObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                counterObserver.unobserve(counterSection);
+            }
+        }, { threshold: 0.5 });
+
+        counterObserver.observe(counterSection);
+    </script>
+</body>
+</html></html>
